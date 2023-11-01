@@ -4,9 +4,11 @@ const mysql = require('mysql');
 const fs = require('fs');
 const path = require('path');
 require("dotenv").config();
+const cors = require('cors');
 
 const app = express();
 const port = 5757;
+app.use(cors());
 app.use(express.json());
 
 // MySQL db 설정입니다. 
