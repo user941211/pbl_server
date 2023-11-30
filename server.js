@@ -17,6 +17,7 @@ app.use(session({
     saveUninitialized: true
 }));
 
+app.use('/uploads', express.static('uploads'));
 app.use('/', userRoutes);
 
 app.listen(port, () => {
