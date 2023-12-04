@@ -68,3 +68,15 @@ exports.logoutUser = (req, res) => {
         res.status(200).json('로그아웃 성공!');
     });
 };
+
+exports.bletest = (req, res) => {
+    // 세션 제거
+    const sql='SELECT * from checks'
+    db.query(sql, (err, result) => {
+        if(result.length > 0){
+            res.status(200).json('서버 및 db 연결 성공!')
+        } else {
+            res.status(400).json('서버는 연결했으나 db는 연결 불가..')
+        }
+    })
+};

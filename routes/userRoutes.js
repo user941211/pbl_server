@@ -8,6 +8,7 @@ router.get('/test', userController.getUsers);
 router.post('/login', userController.loginUser);
 router.post('/signup', userController.createUser);
 router.post('/logout', userController.logoutUser);
+router.get('/checks', userController.bletest);
 router.post('/upload', dbController.uploadFile, dbController.saveFileToDb);
 
 router.use('/db', dbRoutes);
