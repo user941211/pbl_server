@@ -4,7 +4,7 @@ const userController = require('../controllers/userController');
 const dbController = require('../controllers/dbController');
 const dbRoutes = require('./dbRoutes');
 
-router.get('/test', userController.getUsers);
+router.get('/test', userController.tests);
 router.post('/login', userController.loginUser);
 router.post('/signup', userController.createUser);
 router.post('/logout', userController.logoutUser);

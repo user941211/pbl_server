@@ -4,8 +4,8 @@ const passwordPattern = /^(?=.*\d)(?=.*[a-zA-Z]).{8,15}$/;
 //위는 정규식이다. 영어 대소문자, 숫자를 포함해서 8자리에서 15자리 사이여야하고
 //이걸 프론트에서도 똑같이 적용해서 이중으로 확인해보자!
 
-exports.getUsers = (req, res) => {
-    const sql = 'SELECT * FROM users';
+exports.tests = (req, res) => {
+    const sql = 'SELECT * FROM checks';
     db.query(sql, (err, results) => {
         if (err) {
             console.error('MySQL query error:', err);
